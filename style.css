@@ -7,17 +7,14 @@
 
 .hero {
     width: 100%;
-    min-height: 100vh;
-    background-image: url('html%20code/blue.jpg');
+    min-height: 90vh;
+    background-image: url('utsho.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 10px 10%;
     overflow: hidden;
-}
-.hero {
-    background-color: rgb(0, 255, 221); /* Temporary test */
 }
 
 nav{

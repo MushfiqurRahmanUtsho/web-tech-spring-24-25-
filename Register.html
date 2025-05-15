@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Register.html</title>
+</head>
+
+<body>
+    <h1>Registration</h1>
+
+    <form id="regForm">
+        First Name:<input type="text" name="fName" id="fgetName"><br>
+        Last Name:<input type="text" name="lName" id="lgetName"><br>
+        Date Of Birth: <input type="date"><br>
+
+        gender:
+        <input type="radio" name="gender">
+        <label for="html">Male</label>
+
+        <input type="radio" name="gender">
+        <label for="html">Female</label> <br>
+
+
+        Mobile:<input type="text" name="mobileName" id="mobileID"><br>
+
+        Email Id:<input type="email"><br>
+
+        Password:<input type="password"><br>
+        Confirm Password:<input type="password" placeholder="re-type password"><br>
+
+        <button type="submit">Submit </button>
+
+        <p id="Error"></p>
+    </form>
+
+
+
+
+    <script>
+        document.getElementById("regForm").addEventListener('submit',
+            function (e) {
+                e.preventDefault(); // Prevent default form submission
+                const fName = document.getElementById("fgetName").value
+                const lName = document.getElementById("lgetName").value
+
+                const error = document.getElementById('Error')
+
+                if (fName == '' || lName == '') {
+                    error.textContent = 'Please fill up Name'
+
+                }
+
+
+                const mobileName = document.getElementById("mobileID").value;
+                const mobileNumber = parseInt(mobileName, 10);
+
+                if (Number.isInteger(mobileNumber) || mobileName=='') {
+                    console.log("Mobile is valid:", mobileNumber);
+                } else {
+                    error.textContent = "Please enter a valid mobile number";
+                }
+
+
+
+
+                console.log(fName, lName)
+            }
+        )
+    </script>
+</body>
+
+</html>

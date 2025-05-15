@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>JS</title>
+</head>
+<body>
+ 
+<form id="logForm">
+   ID: <input type="number" name="id" id="id"><br>
+   Pass: <input type="password" name="pass" id="pass"><br>
+   <p id="Error"></p>
+   <button type="submit">Login</button>
+
+   <p id="errMSG"></p>
+</form>
+ 
+<script>
+   
+   document.getElementById('logForm').addEventListener('submit',
+   function(e){
+    
+      e.preventDefault()
+   const id= document.getElementById('id').value
+   const pass= document.getElementById('pass').value
+   const error=document.getElementById('Error')
+   if(id==''||pass=='')
+   {
+     error.textContent= 'Please fill up the form'
+    // document.getElementById("errMSG").innerHTML="Fill up the form"
+   }
+   if(pass.length<4)
+   {
+      error.textContent= 'Password can not be less than 4 digit'
+     
+   }
+   })
+</script>
+ 
+</body>
+</html>
